@@ -1,0 +1,17 @@
+<div class="wrapper">
+    <h1>Musicas mas escuchadas</h1>
+    <div *ngFor="let track of track; let indice=index">
+        <div (click)="sendPlay(track)" class="card">
+            <div class="group">
+                <p class="card-numero">{{indice+1}}</p>
+                <img [src]="track.cover" alt="">
+                <div class="card-group-name">
+                    <i class="uil uil-angle-right-b"></i>
+                    <p class="card-name">{{track.album}}</p>
+                </div>
+            </div>
+            <p class="card-artista">{{track.name}}</p>
+            <p class="card-max-minutos">4:31</p>
+        </div>
+    </div>
+</div>

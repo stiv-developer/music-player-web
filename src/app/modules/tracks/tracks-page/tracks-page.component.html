@@ -1,0 +1,11 @@
+<div class="tracks-page">
+    <!-- <div *ngFor="let track of trackTrending"> -->
+    <app-card-section [track]="trackTrending"></app-card-section>
+    <!-- </div> -->
+    <div class="grid">
+
+
+        <app-media-player></app-media-player>
+        <app-card-player [track]="trackTrending"></app-card-player>
+    </div>
+</div>

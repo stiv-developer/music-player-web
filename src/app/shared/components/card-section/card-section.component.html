@@ -1,0 +1,16 @@
+<div class="wrapper">
+    <h1>¡Las mejores musicas! <span>-Top 5</span></h1>
+
+    <div class="grid">
+        <carousel [height]="400" [cellsToShow]="6" class="carousel-html-content">
+            <div class="carousel-cell" *ngFor="let track of track">
+                <div class="card">
+                    <img class="card-img" [src]="track.cover" alt="">
+                    <p class="card-name">{{track.name}}</p>
+                    <p class="card-artista">{{track.album}}</p>
+                </div>
+            </div>
+        </carousel>
+    </div>
+
+</div>

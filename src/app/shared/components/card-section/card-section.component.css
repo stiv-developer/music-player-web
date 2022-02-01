@@ -1,0 +1,59 @@
+img {
+    height: 250px;
+    width: 250px;
+    /* background: red; */
+    border-radius: 21px;
+    box-shadow: -6px 17px 21px -12px rgba(0, 0, 0, 0.67);
+    -webkit-box-shadow: -6px 17px 21px -12px rgba(0, 0, 0, 0.67);
+    -moz-box-shadow: -6px 17px 21px -12px rgba(0, 0, 0, 0.67);
+}
+
+.grid {
+    display: flex;
+    flex-direction: row;
+}
+
+.wrapper {
+    padding-top: 50px;
+    padding-left: 45px;
+}
+
+h1 {
+    color: rgb(29, 27, 27);
+}
+
+span {
+    color: rgb(77, 75, 75);
+    font-size: 23px;
+    font-weight: 100;
+}
+
+h1,
+p {
+    margin-top: 0;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: bold;
+}
+
+.card-name {
+    font-size: 22px;
+    margin-top: 13px;
+    margin-bottom: 0px;
+}
+
+.card-artista {
+    color: rgb(77, 75, 75);
+    font-size: 23px;
+    font-weight: 100;
+}
+
+.card {
+    padding: 14px;
+}
+
+
+/* CAROUSEL*/
+
+.carousel-html-content {
+    width: 98%;
+}

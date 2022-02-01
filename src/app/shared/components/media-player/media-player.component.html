@@ -1,0 +1,44 @@
+<div class="wrapper">
+    <h1>Reproducir ahora</h1>
+    <div class="card-player" *ngIf="multimediaService.trackInfo$ |async as mockCover">
+        <div class="card-player-group">
+            <img [src]="mockCover?.cover" alt="">
+            <div class="card-player-name">{{mockCover?.album}}</div>
+            <div class="card-player-artista">{{mockCover?.name}}</div>
+
+        </div>
+
+
+        <div class="media-linetime">
+            <span class="time-progress">
+                <span class="time-progress-live">
+                </span>
+            </span>
+
+        </div>
+        <div class="group-time">
+            <div class="time">{{multimediaService.timeElapsed$ | async}}</div>
+            <span (click)="handlePosition($event)" class="time-progress">
+                <span class="time-progress-live" [style.width]="(multimediaService.playerPorcentage$ | async)+'%'">
+                </span>
+            </span>
+            <div class="time">{{multimediaService.timeRemaining$ | async}}</div>
+        </div>
+        <div class="buttons-media">
+            <button class="arrow btn">
+                <i class="uil uil-previous"></i>
+            </button>
+            <button (click)="multimediaService.togglePlayer()" class="play btn">
+                <i [ngClass]="
+                {
+                    'uil-play-circle': state === 'paused',
+                    'uil-pause-circle': state !== 'paused'
+                }
+             "  class="uil"></i>
+            </button>
+            <button class="arrow btn">
+                <i class="uil uil-step-forward"></i>
+            </button>
+        </div>
+    </div>
+</div>
